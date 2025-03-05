@@ -1,10 +1,11 @@
 FROM oven/bun:1
 
 WORKDIR /usr/src/app
-
-COPY ./package ./packages
-COPY ./bun.lock ./bun.lock
-COPY ./package.json ./packages.json
+ARG DATABASE_URL
+ENV DATABASE_URL=${DATABASE_URL}
+COPY ./packages ./packages
+COPY ./bun.lockb ./bun.lockb
+COPY ./package.json ./package.json
 COPY ./turbo.json ./turbo.json
 
 COPY ./apps/ws ./apps/ws
