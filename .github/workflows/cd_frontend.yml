@@ -1,4 +1,4 @@
-name: Continuous Deployment (Prod) (Backend)
+name: Continuous Deployment (Prod) (Frontend)
 
 on:
   push:
@@ -20,5 +20,7 @@ jobs:
         with:
             context: .
             file: ./docker/Dockerfile.frontend
+            build-args: |
+              DATABASE_URL=${{ secrets.DATABASE_URL }}
             push: true
             tags: yash/todo-app-frontend:${{ github.sha }}

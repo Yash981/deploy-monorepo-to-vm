@@ -20,6 +20,8 @@ jobs:
         with:
             context: .
             file: ./docker/Dockerfile.backend
+            build-args: |
+              DATABASE_URL=${{ secrets.DATABASE_URL }}
             push: true
             tags: yash/todo-app-backend:${{ github.sha }}
          
