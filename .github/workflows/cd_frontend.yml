@@ -19,7 +19,6 @@ jobs:
         uses: docker/build-push-action@v4
         with:
             context: .
-            file: ./docker/Dockerfile.backend
+            file: ./docker/Dockerfile.frontend
             push: true
-            tags: yash/todo-app-backend:${{ github.sha }}
-         
+            tags: yash/todo-app-frontend:${{ github.sha }}
