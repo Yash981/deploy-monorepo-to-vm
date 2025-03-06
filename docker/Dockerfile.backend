@@ -10,9 +10,9 @@ COPY ./package.json ./package.json
 COPY ./turbo.json ./turbo.json
 
 
+RUN bun install
 COPY ./apps/backend ./apps/backend
 
-RUN bun install
 
 
 EXPOSE 8080

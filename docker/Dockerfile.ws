@@ -8,10 +8,8 @@ COPY ./bun.lockb ./bun.lockb
 COPY ./package.json ./package.json
 COPY ./turbo.json ./turbo.json
 
-COPY ./apps/ws ./apps/ws
-
-
 RUN bun install
+COPY ./apps/ws ./apps/ws
 
 RUN bun run db:generate
 
