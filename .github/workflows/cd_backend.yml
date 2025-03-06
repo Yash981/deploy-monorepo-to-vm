@@ -23,5 +23,5 @@ jobs:
             build-args: |
               DATABASE_URL=${{ secrets.DATABASE_URL }}
             push: true
-            tags: yash/todo-app-backend:${{ github.sha }}
+            tags: yashwanth14/todo-app-backend:${{ github.sha }}
          
