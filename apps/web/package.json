@@ -9,14 +9,14 @@
     "lint": "next lint --max-warnings 0",
     "check-types": "tsc --noEmit",
     "postinstall": "cd ../../packages/db && bun prisma generate || true",
-  "build": "next build"
+    "build": "next build"
   },
   "dependencies": {
     "@repo/ui": "*",
     "next": "^15.1.6",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "@repo/db":"*"
+    "@repo/db": "*"
   },
   "devDependencies": {
     "@repo/eslint-config": "*",
