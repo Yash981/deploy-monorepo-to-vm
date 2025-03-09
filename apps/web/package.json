@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "next lint --max-warnings 0",
     "check-types": "tsc --noEmit",
-    "postinstall": "bun --filter=db run generate",
+    "postinstall": "cd ../../packages/db && bun prisma generate || true",
   "build": "next build"
   },
   "dependencies": {
