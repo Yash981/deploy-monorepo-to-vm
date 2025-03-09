@@ -8,8 +8,8 @@
     "start": "next start",
     "lint": "next lint --max-warnings 0",
     "check-types": "tsc --noEmit",
-    "postinstall": "cd ../../packages/db && prisma generate",
-    "build": "cd ../../packages/db && prisma generate && next build"
+    "postinstall": "bun --filter=db run generate",
+  "build": "next build"
   },
   "dependencies": {
     "@repo/ui": "*",
